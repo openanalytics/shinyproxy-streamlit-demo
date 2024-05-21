@@ -22,14 +22,15 @@ sudo docker build -t openanalytics/shinyproxy-streamlit-demo .
 
 To add the streamlit application to ShinyProxy add the following lines to its configuration file (see [application.yml](./application.yml) for a complete file):
 ```
-specs:
-  - id: streamlit-demo
-    display-name: Streamlit Demo Application
-    port: 8501
-    container-image: openanalytics/shinyproxy-streamlit-demo
+proxy:
+  specs:
+    - id: streamlit-demo
+      display-name: Streamlit Demo Application
+      port: 8501
+      container-image: openanalytics/shinyproxy-streamlit-demo
 ```
 
-# References
+## References
 * https://docs.streamlit.io/library/get-started/create-an-app
 
 
